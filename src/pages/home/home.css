@@ -79,3 +79,47 @@ h6 {
   background-position: center bottom;
 }
 
+
+#home .content .music,#home .content .movie{
+    height: 50%;
+}
+#home .content .movie{
+    position: relative;
+}
+#home .content .navlink{
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background: #ffffff;
+    opacity: 0.5;
+}
+#home .content .navlink .am-button{
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#home .content .navlink .am-button img{
+    width: 24px;
+    height: 24px;
+}
+#home .content .notbar{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+#home .content .am-notice-bar{
+    height: 44px;
+}
+#home .content .jiaoc{
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    z-index: 2;
+    opacity: 0.6;
+}

@@ -1,0 +1,10 @@
+.bofang {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+}
+
+#palybox {
+  width: 100%;
+  height: 600px;
+}

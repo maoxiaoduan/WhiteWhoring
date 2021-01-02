@@ -13,22 +13,22 @@ class Navtxt extends Component {
   }
   setModal2Visible(modal2Visible, index) {
     this.setState({ modal2Visible });
-    console.log("456");
+    // console.log("456");
     if (index) {
-      console.log("741852");
-      this.props.history.push({ pathname: "/movie" });
+      // console.log("741852");
+      this.props.history.push({
+        state: { name: "ok" },
+        pathname: "/movie",
+      });
     }
   }
-  goMovie = () => {
-    console.log(this.props);
-    this.props.history.push({ pathname: "/movie" });
-  };
   render() {
     return (
       <div>
         <NavBar
+          key={0}
           mode="black"
-          icon={<Icon type="search" style={{}} />}
+          icon={<Icon type="search" key={1} />}
           onLeftClick={() => console.log("onLeftClick")}
           rightContent={[
             <>
@@ -46,7 +46,7 @@ class Navtxt extends Component {
                 onOk={() => this.setModal2Visible(false, 1)}
                 onCancel={() => this.setModal2Visible(false)}
                 cancelText="不弄啥"
-                okText='洒家要去看电影'
+                okText="洒家要去看电影"
               >
                 <div
                   style={{
