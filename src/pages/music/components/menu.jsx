@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { NavLink, Switch, Route, withRouter,Redirect } from "react-router-dom";
+import { NavLink, Switch, Route, withRouter, Redirect } from "react-router-dom";
 import $ from "jquery";
 import Video from "../views/video";
 import Mine from "../views/mine";
 import Boke from "../views/boke";
 import Find from "../views/find";
+import store from "../../../store/index";
 
 class Menu extends Component {
   constructor(props) {
@@ -13,26 +14,80 @@ class Menu extends Component {
   }
   goHome = () => {
     this.props.history.push({ pathname: "/" });
-    console.log(this.props);
+    // console.log(this.props);
+  };
+  onChangeTxt = (id) => {
+    let name = "";
+    if (id === 1) {
+      name = "短视频";
+    }
+    if (id === 2) {
+      name = "我的";
+    }
+    if (id === 3) {
+      name = "播客";
+    }
+    if (id === 4) {
+      name = "发现";
+    }
+    // console.log(name, "onchange");
+    const action = {
+      type: "change_titleTxt",
+      value: name,
+    };
+    store.dispatch(action);
   };
   render() {
     return (
       <>
-        <ul id="navs" data-open="收起" data-close="菜单">
+        <ul id="navs" data-open="收起" data-close="菜单" style={{zIndex:'10'}}>
           <li>
-              <span onClick={this.goHome}>首页</span>
+            <span
+              style={{
+                background: "#3399CC",
+                display: "block",
+                borderRadius: "50%",
+              }}
+              onClick={this.goHome}
+            >
+              首页
+            </span>
           </li>
           <li>
-            <NavLink to="/music/video">短视频</NavLink>
+            <NavLink
+              style={{ background: "#3399CC" }}
+              to="/music/video"
+              onClick={() => this.onChangeTxt(1)}
+            >
+              短视频
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/music/mine">我的</NavLink>
+            <NavLink
+              style={{ background: "#3399CC" }}
+              to="/music/mine"
+              onClick={() => this.onChangeTxt(2)}
+            >
+              我的
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/music/boke">播客</NavLink>
+            <NavLink
+              style={{ background: "#3399CC" }}
+              to="/music/boke"
+              onClick={() => this.onChangeTxt(3)}
+            >
+              播客
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/music/find">发现</NavLink>
+            <NavLink
+              style={{ background: "#3399CC" }}
+              to="/music/find"
+              onClick={() => this.onChangeTxt(4)}
+            >
+              发现
+            </NavLink>
           </li>
         </ul>
         <Switch>
@@ -40,12 +95,30 @@ class Menu extends Component {
           <Route path="/music/mine" component={Mine} />
           <Route path="/music/boke" component={Boke} />
           <Route path="/music/find" component={Find} />
-          <Redirect to='/music/find'></Redirect>
+          <Redirect to="/music/find"></Redirect>
         </Switch>
       </>
     );
   }
   componentDidMount() {
+    let name = "";
+    if (this.props.location.pathname === "/music/mine") {
+      name = "我的";
+    }
+    if (this.props.location.pathname === "/music/find") {
+      name = "发现";
+    }
+    if (this.props.location.pathname === "/music/video") {
+      name = "短视频";
+    }
+    if (this.props.location.pathname === "/music/boke") {
+      name = "播客";
+    }
+    const action = {
+      type: "change_titleTxt",
+      value: name,
+    };
+    store.dispatch(action);
     var ul = $("#navs"),
       li = $("#navs li"),
       i = li.length,

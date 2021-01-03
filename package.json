@@ -18,7 +18,8 @@
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "video-react": "^0.14.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "xgplayer": "^2.16.2"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -44,6 +45,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://localhost:3000",
   "devDependencies": {
     "babel-plugin-import": "^1.13.3",
     "customize-cra": "^1.0.0",

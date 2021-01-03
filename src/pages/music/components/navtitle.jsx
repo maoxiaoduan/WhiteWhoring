@@ -3,38 +3,51 @@ import { withRouter } from "react-router-dom";
 import { NavBar, Icon } from "antd-mobile";
 import { Modal, Button } from "antd";
 import Xiaolian from "../../../assets/img/white.jpg";
+import store from "../../../store/index";
 class Navtxt extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      txt: '',
       modal1Visible: false,
       modal2Visible: false,
     };
+    store.subscribe(this.handleStoreChange); //监听store变化
   }
   setModal2Visible(modal2Visible, index) {
     this.setState({ modal2Visible });
-    // console.log("456");
     if (index) {
-      // console.log("741852");
       this.props.history.push({
         state: { name: "ok" },
         pathname: "/movie",
       });
     }
   }
+
+  handleStoreChange = () => {
+    // console.log(this.props);
+    this.setState({
+      txt: store.getState().titleTxt,
+    });
+  };
+  componentDidMount() {
+    this.setState({
+      txt: store.getState().titleTxt,
+    });
+  }
   render() {
     return (
       <div>
         <NavBar
-          key={0}
           mode="black"
-          icon={<Icon type="search" key={1} />}
+          style={{ background: "#00adb5" }}
+          icon={<Icon type="search" />}
           onLeftClick={() => console.log("onLeftClick")}
           rightContent={[
             <>
               <Button
                 type="primary"
-                style={{ background: "#108ee9", borderColor: "#108ee9" }}
+                style={{ background: "#00adb5", borderColor: "#00adb5" }}
                 onClick={() => this.setModal2Visible(true)}
               >
                 <span className="iconfont icon-bofang1">去看电影</span>
@@ -60,7 +73,7 @@ class Navtxt extends Component {
             </>,
           ]}
         >
-          NavBar
+          {this.state.txt}
         </NavBar>
       </div>
     );

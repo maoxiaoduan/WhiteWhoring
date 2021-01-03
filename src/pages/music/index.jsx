@@ -13,7 +13,6 @@ class Music extends Component {
     return (
       <div>
         <NavTxt />
-        网抑模块
         <Menu />
       </div>
     );
