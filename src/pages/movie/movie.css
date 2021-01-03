@@ -1,10 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.movie_hread{
+  width: 100%;
+  height: 100%;
+}
 .bofang {
   width: 100%;
-  height: 200px;
+  height: 50%;
   border: 1px solid #ccc;
 }
 
 #palybox {
   width: 100%;
-  height: 600px;
+  height: 100%;
+}
+.movie_hread form {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.movie_hread form .tex1{
+  width: 230px;
+  height: 30px;
+}
+.movie_hread form .tex2{
+  height: 30px;
+  
+}
+.movie_hread form .tex3{
+  width: 50px;
+  height: 30px;
+}
+.movie_hread .wangzhan{
+  width: 100%;
+  height: 32%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.movie_hread .wangzhan a{
+  display:inline-block;
+  height: 50px;
+  padding: 10px 15px;
+  line-height: 30px;
+  border-radius: 4px;
+  margin-left: 5px;
+  color: #ffffff;
+}
+.movie_hread .wangzhan a:nth-of-type(1){
+  background: #2dce89;
+}
+.movie_hread .wangzhan a:nth-of-type(2){
+  background: #f5365c;
+}
+.movie_hread .wangzhan a:nth-of-type(3){
+  background: #11cdef;
+}
+.movie_hread .wangzhan a:nth-of-type(4){
+  background: #fb6340;
+}
+.movie_hread .wangzhan a:nth-of-type(5){
+  background: #5e72e4;
+}
+.movie_hread .wangzhan a:nth-of-type(6){
+  background: #11cdef;
+}
+.movie_hread .wangzhan a:nth-of-type(7){
+  background: #2dce89;
+}
+.movie_hread .wangzhan a:nth-of-type(8){
+  background: #5e72e4;
+}
+.movie_hread .wangzhan a:nth-of-type(9){
+  background: #5e72e4;
 }

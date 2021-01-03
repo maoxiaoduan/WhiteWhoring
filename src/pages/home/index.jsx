@@ -75,10 +75,7 @@ class Home extends Component {
               {
                 pathname: "/movie",
                 state: { name: "ok" },
-              },
-              
-                console.log(this.props,'123456')
-              
+              },                                         
             ),
         },
       ]
@@ -139,7 +136,7 @@ class Home extends Component {
             </div>
             <div className="swidth">
               <Carousel autoplay={true} infinite={true}>
-                <img src={movietu} style={{ width: "100%" }} alt="" />
+                <img src={movietu} style={{ width: "100%"  }} alt="" />
                 <img src={movietu1} style={{ width: "100%" }} alt="" />
                 <img src={movietu2} style={{ width: "100%" }} alt="" />
                 <img src={movietu3} style={{ width: "100%" }} alt="" />
