@@ -25,14 +25,9 @@ class Find extends Component {
       <div className="find">
         <div className="lunbo">
           <WingBlank>
-            <Carousel
-              autoplay={true}
-              infinite
-              beforeChange={(index) => console.log(index)}
-            >
+            <Carousel autoplay={true} infinite>
               {this.state.data.map((val) => (
                 <a
-                  onChange={this.handleClick}
                   key={val}
                   href={`${val.url}`}
                   style={{

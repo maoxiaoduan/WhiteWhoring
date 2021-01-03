@@ -71,15 +71,15 @@ class Movie extends Component {
                     />                       
                 </div>
                <div className='wangzhan'>
-                    <a href="https://www.iqiyi.com/" target='_blank'>爱奇艺视频</a>
-                    <a href="https://v.qq.com/" target='_blank'>腾讯视频</a>
-                    <a href="http://www.le.com/" target='_blank'>乐视视频</a>
-                    <a href="https://www.mgtv.com/" target='_blank'>芒果视频</a>
-                    <a href="https://www.tudou.com/" target='_blank'>土豆视频</a>
-                    <a href="https://www.youku.com/" target='_blank'>优酷视频</a>
-                    <a href="https://tv.sohu.com/" target='_blank'>搜狐视频</a>
-                    <a href="https://www.pptv.com/" target='_blank'>PPTV视频</a>
-                    <a href="https://www.919yy.com/" target='_blank'>全网影视搜索</a>
+                    <a href="https://www.iqiyi.com/" target='blank'>爱奇艺视频</a>
+                    <a href="https://v.qq.com/" target='blank'>腾讯视频</a>
+                    <a href="http://www.le.com/" target='blank'>乐视视频</a>
+                    <a href="https://www.mgtv.com/" target='blank'>芒果视频</a>
+                    <a href="https://www.tudou.com/" target='blank'>土豆视频</a>
+                    <a href="https://www.youku.com/" target='blank'>优酷视频</a>
+                    <a href="https://tv.sohu.com/" target='blank'>搜狐视频</a>
+                    <a href="https://www.pptv.com/" target='blank'>PPTV视频</a>
+                    <a href="https://www.919yy.com/" target='blank'>全网影视搜索</a>
                </div>
             </div> 
         );

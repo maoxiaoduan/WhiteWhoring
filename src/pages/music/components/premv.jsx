@@ -9,9 +9,9 @@ class PreMv extends Component {
     };
   }
   componentDidMount() {
-    console.log(this.props.detail);
+    // console.log(this.props.detail);
     axios.get("/video/url?id=" + this.props.detailId).then((res) => {
-      console.log(res.data, res, "preMv");
+    //   console.log(res.data, res, "preMv");
       this.setState({
         detailUrl: res.data.urls[0].url,
       });
@@ -25,12 +25,12 @@ class PreMv extends Component {
         height: window.innerHeight,
         width: window.innerWidth,
       });
-      console.log(this.state.detailUrl);
+    //   console.log(this.state.detailUrl);
     });
   }
   render() {
-    const { detail, detailId } = this.props;
-    const { detailUrl } = this.state;
+    const {  detailId } = this.props;
+    // const { detailUrl } = this.state;detail,
     return (
       <>
         <div>

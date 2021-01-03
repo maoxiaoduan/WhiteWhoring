@@ -22,7 +22,7 @@ class Video extends Component {
     axios
       .get(`/video/group?id=${this.state.mvId}&offset=${this.state.listNum}`)
       .then((res) => {
-        console.log(res.data.datas, "liebiao");
+        // console.log(res.data.datas, "liebiao");
         this.setState({
           list: res.data.datas,
         });

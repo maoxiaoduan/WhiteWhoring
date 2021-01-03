@@ -11,13 +11,6 @@ export default (state = defaultState, action) => {
             return { ...state, titleTxt: action.value };
         case 'chang_mvListId':
             return { ...state, mvListId: action.value };
-        case 'del_list_action':
-            const NewList = [...state.list];
-            NewList.splice(action.index, 1)
-            // console.log(NewList);
-            return {
-                ...state, list: [...NewList]
-            }
     }
 
     return state
